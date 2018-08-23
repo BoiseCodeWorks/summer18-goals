@@ -1,16 +1,26 @@
 {
-  "name": "hackathon-classes",
+  "name": "summer18-goals",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb-core": "^3.1.2",
+    "mongoose": "^5.2.9"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoiseCodeWorks/summer18-goals.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.3",
-    "mongoose": "^5.2.9"
-  }
+  "bugs": {
+    "url": "https://github.com/BoiseCodeWorks/summer18-goals/issues"
+  },
+  "homepage": "https://github.com/BoiseCodeWorks/summer18-goals#readme"
 }

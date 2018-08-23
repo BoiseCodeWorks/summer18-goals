@@ -1,13 +1,23 @@
 let router = require('express').Router()
 let Users = require('../models/user')
 
+router.post('/login', (req, res, next) => {
+  //PAYLOAD EXAMPLE {username: 'Jake', pin: '1101'}
+  Users.findOne(req.body).then(user => {
+    if (user) {
+      return res.send(user)
+    }
+    return res.status(401).send({
+      error: "Invalid Login"
+    })
+  })
+})
 
-router.get('', (req, res, next) => { })
-router.get('', (req, res, next) => { })
-
-router.post('', (req, res, next) => { })
-router.put('', (req, res, next) => { })
-router.delete('', (req, res, next) => { })
+router.post('/register', (req, res, next) => {
+  Users.create(req.body).then(user => {
+    res.send(user)
+  }).catch(next)
+})
 
 
 module.exports = router

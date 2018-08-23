@@ -5,11 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>My Goal Tracker</title>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <!-- <img src="//placehold.it/200x200" alt="" class="fa-spin"> -->
+    <form onsubmit="app.controllers.user.login(event)">
+      <input type="text" name="username">
+      <input type="password" name="pin">
+      <button type="submit">GO GO GO</button>
+    </form>
+  </div>
 
   <script src="app/main.js" type="module"></script>
 

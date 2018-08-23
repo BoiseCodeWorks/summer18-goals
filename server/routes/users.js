@@ -3,7 +3,10 @@ let Users = require('../models/user')
 
 router.post('/login', (req, res, next) => {
   //PAYLOAD EXAMPLE {username: 'Jake', pin: '1101'}
-  Users.findOne(req.body).then(user => {
+  Users.findOne({
+    username: req.body.username,
+    pin: req.body.pin
+  }).then(user => {
     if (user) {
       return res.send(user)
     }
